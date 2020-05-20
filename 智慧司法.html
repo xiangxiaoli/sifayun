@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ECharts 实现玉林市司法局“数字法治、智慧司法”智能化综合服务平台</title>
+    <script src="jquery-1.10.2.min.js"></script>
+    <script src="echarts.min.js"></script>
+    <style type="text/css">
+        html, body, #main { height: 100%; width: 100%; margin: 0; padding: 0 }
+    </style>
+</head>
+<body>
+    <div id="main" style=""></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        option = {
+            title: { text: '智慧司法云' },
+            tooltip: {
+                formatter: function (x) {
+                    return x.data.des;
+                }
+            },
+            series: [
+                {
+                    type: 'graph',
+                    layout: 'force',
+                    symbolSize: 80,
+                    roam: true,
+                    //edgeSymbol: ['circle', 'arrow'],
+                   // edgeSymbolSize: [4, 10],
+                    edgeLabel: {
+                        normal: {
+                            textStyle: {
+                                fontSize: 20
+                            }
+                        }
+                    },
+                    force: {
+                        repulsion: 1500,
+                        edgeLength: [40, 50]
+                    },
+                    draggable: true,
+                    itemStyle: {
+                        normal: {
+                            color: '#0080ff'
+                        }
+                    },
+                    lineStyle: {
+                        normal: {
+                            width: 2,
+                            color: '#4b565b'
+
+                        }
+                    },
+                    edgeLabel: {
+                        normal: {
+                            show: true,
+                            formatter: function (x) {
+                                return x.data.name;
+                            }
+                        }
+                    },
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                            }
+                        }
+                    },
+                    data: [
+                        {
+                            name: '智慧司法云',
+                            des: '1+10+N',
+                            symbolSize: 150,
+                            itemStyle: {
+                                normal: {
+                                    color: 'blue',
+									label:{
+										fontSize: 30,
+										color:'#fff',
+									}
+                                }
+                            }
+							
+						}, {
+                            name: '智能化公共法律服务平台',
+                            //des: '',
+                            itemStyle: {
+                                normal: {
+                                    color: '#0080ff'
+                                }
+                            }
+                        }, {
+                            
+                            name: '社区矫正平台',
+                           // des: '',
+                            symbolSize: 100
+                        }, {
+                            
+                            name: '安置帮教平台',
+                           // des: '',
+                            itemStyle: {
+                                normal: {
+                                    color: '#0080ff'
+                                }
+                            }
+                        }, {
+                            
+                            name: '贵人关强制隔离戒毒所监管平台',
+                           // des: '',
+                            itemStyle: {
+                                normal: {
+                                    color: '#0080ff'
+                                }
+                            }
+                        }, {
+                            
+                            name: '普法教育平台',
+                            //des: '',
+                            symbolSize: 100
+                        }, {
+                            
+                            name: '人民调解平台',
+                           // des: '',
+                            itemStyle: {
+                                normal: {
+                                    color: '#0080ff'
+                                }
+                            }
+                        }, {
+                           
+                            name: '“三大纠纷”调处平台',
+                           // des: ''
+                        }, {
+                           
+                            name: '移动执法平台'
+                        }, {
+                            
+                            name: '智慧审文平台',
+                            //des: '',
+                            itemStyle: {
+                                normal: {
+                                    color: '#0080ff'
+                                }
+                            }
+                        }, {
+                           
+                            name: '行政复议平台',
+                           // des: '<br/>',
+                        }, {
+                           
+                            name: '数字认证加密技术',
+                            //des: '',
+                            itemStyle: {
+                                normal: {
+                                    color: '#50C5ff'
+                                }
+                            }
+                        }, {
+                            
+                            name: '人脸识别技术',
+                            //des: '',
+							itemStyle: {
+                                normal: {
+                                    color: '#50C5ff'
+                                }
+                            }
+                        }, {
+                            
+                            name: '语音识别转换技术',
+                           // des: '',
+							itemStyle: {
+                                normal: {
+                                    color: '#50C5ff'
+                                }
+                            }
+                        }, {
+                            
+                            name: '图形识别技术',
+                            itemStyle: {
+                                normal: {
+                                    color: '#50C5ff'
+                                }
+                            }
+                        }, {
+                            
+                            name: '声纹识别技术',
+                            itemStyle: {
+                                normal: {
+                                    color: '#50C5ff'
+                                }
+                            }
+                        }, {
+                            
+                            name: '行为识别技术',
+							itemStyle: {
+                                normal: {
+                                    color: '#50C5ff'
+                                }
+                            }
+                        }, {
+                           
+                            name: '文书自动生成技术',
+							itemStyle: {
+                                normal: {
+                                    color: '#50C5ff'
+                                }
+                            }
+                        }, {
+                           
+                            name: '电子签章数字签名技术',
+                            itemStyle: {
+                                normal: {
+                                    color: '#50C5ff'
+                                }
+                            }
+                        }, {
+                           
+                            name: '物联网技术',
+							itemStyle: {
+                                normal: {
+                                    color: '#50C5ff'
+                                }
+                            }
+                        }, {
+                           
+                            name: '区块链技术',
+							itemStyle: {
+                                normal: {
+                                    color: '#50C5ff'
+                                }
+                            }
+                        }, {
+                          
+                            name: '云计算技术'
+                        }, {
+                           
+                            name: '远程通讯技术',
+							itemStyle: {
+                                normal: {
+                                    color: '#50C5ff'
+                                }
+                            }
+                        }, {
+                           
+                            name: '可视化管理'
+                        }, {
+                           
+                            name: '大数据分析共享',
+							itemStyle: {
+                                normal: {
+                                    color: '#50C5ff'
+                                }
+                            }
+                        }, {
+                          
+                            name: '智能化运行',
+                        }
+                    ],
+                    links: [
+                        {
+                            source: '智慧司法云',
+                            target: '智能化公共法律服务平台',
+                            name: '子系统',
+                           label:{
+								normal:{
+								show:false,
+								}
+							}
+                        }, {
+                            source: '智慧司法云',
+                            target: '社区矫正平台',
+                            name: '子系统',
+							label:{
+								normal:{
+								show:false,
+								}
+							}
+                        }, {
+                            source: '智慧司法云',
+                            target: '安置帮教平台',
+                            name: '子系统',
+							label:{
+								normal:{
+								show:false,
+								}
+							}
+                        }, {
+                            source: '智慧司法云',
+                            target: '贵人关强制隔离戒毒所监管平台',
+                            name: '子系统',
+							label:{
+								normal:{
+								show:false,
+								}
+							}
+                        }, {
+                            source: '智慧司法云',
+                            target: '普法教育平台',
+                            name: '子系统',
+							label:{
+								normal:{
+								show:false,
+								}
+							}
+                        }, {
+                            source: '智慧司法云',
+                            target: '人民调解平台',
+                          name: '子系统',
+						  label:{
+								normal:{
+								show:false,
+								}
+							}
+                        }, {
+                            source: '智慧司法云',
+                            target: '“三大纠纷”调处平台',
+                             name: '子系统',
+							 label:{
+								normal:{
+								show:false,
+								}
+							}
+                        }, {
+                            source: '智慧司法云',
+                            target: '移动执法平台',
+                             name: '子系统',
+							 label:{
+								normal:{
+								show:false,
+								}
+							}
+                        }, {
+                            source: '智慧司法云',
+                            target: '智慧审文平台',
+                            name: '子系统',
+							label:{
+								normal:{
+								show:false,
+								}
+							}
+                        }, {
+                            source: '智慧司法云',
+                            target: '行政复议平台',
+                            name: '子系统',
+							label:{
+								normal:{
+								show:false,
+								}
+							}
+                        }, {
+                            source: '智慧审文平台',
+                            target: '文书自动生成技术',
+                            name: "举报",
+                           label:{
+								normal:{
+								show:false,
+								}
+							}
+                        }, {
+                            source: '智能化公共法律服务平台',
+                            target: '物联网技术',
+                            name: "举报",
+                           label:{
+								normal:{
+								show:false,
+								}
+							}
+                        }, {
+                            source: '智慧审文平台',
+                            target: '智能化运行',
+							label:{
+									normal:{
+									show:false,
+									}
+								}
+							//关系图为虚线的写法
+						  //name: "举报",
+                         //  lineStyle: {
+                         //      normal: {
+                         //          type: 'dotted',
+                         //          color: '#000'
+                         //      }
+                         //   }
+                        }, {
+                            source: '社区矫正平台',
+                            target: '人脸识别技术',
+                            label:{
+									normal:{
+									show:false,
+									}
+								}
+                        }, {
+                            source: '社区矫正平台',
+                            target: '行为识别技术',
+                            label:{
+									normal:{
+									show:false,
+									}
+								}
+                        }, {
+                            source: '社区矫正平台',
+                            target: '声纹识别技术',
+                            label:{
+									normal:{
+									show:false,
+									}
+								}
+                        }, {
+                            source: '社区矫正平台',
+                            target: '云计算技术',
+                            label:{
+									normal:{
+									show:false,
+									}
+								}
+                        }, {
+                            source: '移动执法平台',
+                            target: '人脸识别技术',
+                            label:{
+									normal:{
+									show:false,
+									}
+								}
+                        }, {
+                            source: '贵人关强制隔离戒毒所监管平台',
+                            target: '可视化管理',
+                            label:{
+									normal:{
+									show:false,
+									}
+								}
+                        }, {
+                            source: '贵人关强制隔离戒毒所监管平台',
+                            target: '远程通讯技术',
+                            label:{
+									normal:{
+									show:false,
+									}
+								}
+                        }, {
+                            source: '人民调解平台',
+                            target: '数字认证加密技术',
+                            label:{
+									normal:{
+									show:false,
+									}
+								}
+                        }, {
+                            source: '人民调解平台',
+                            target: '电子签章数字签名技术',
+                            label:{
+									normal:{
+									show:false,
+									}
+								}
+                        }]
+                }
+            ]
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+</html>
