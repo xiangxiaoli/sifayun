@@ -5,6 +5,7 @@
     <title>玉林市司法局“数字法治、智慧司法”智能化综合服务平台</title>
     <script src="jquery-1.10.2.min.js"></script>
     <script src="echarts.min.js"></script>
+	<script src="yulin.js"></script>
     <style type="text/css">
         html, body, #main { height: 100%; width: 100%; margin: 0; padding: 0 }
     </style>
@@ -14,17 +15,21 @@
 </head>
 <body>
  
-  <div style="height:100%;width:1800px;margin:auto;padding:0;background:url(map2.jpg);-moz-background-size: 100% 100%;  -o-background-size: 100% 100%;  -webkit-background-size: 100% 100%;  background-size: 100% 100%;  -moz-border-image: url(map.png) 0; background-repeat:no-repeat\9;  
+ <!-- <div style="height:100%;width:1800px;margin:auto;padding:0;background:url(map2.jpg);-moz-background-size: 100% 100%;  -o-background-size: 100% 100%;  -webkit-background-size: 100% 100%;  background-size: 100% 100%;  -moz-border-image: url(map.png) 0; background-repeat:no-repeat\9;  
 
 background-image:none\9;
 
-filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='map2.jpg', sizingMethod='scale')\9;"> <div id="main" style=""></div></div>
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='map2.jpg', sizingMethod='scale')\9;"> </div>-->
+<div id="main" style=""></div>
 <audio controls autoplay="autoplay" loop="loop" style="display:none;"><source src="solstice.mp3" type="audio/mpeg" /></audio>
 <!--<EMBED src="solstice.mp3" autostart="true" loop="true" width="80" height="20"> 它不支持firefox-->
     <script type="text/javascript">
         var myChart = echarts.init(document.getElementById('main'));
+		  echarts.registerMap('yulin', yulinJson); //yunnanJson名称取自yunnan.js里的var  yunnanJson变量名
+		  
+		  
 		 option = {
-            title: { text: '智慧司法云',textStyle:{color: '#fff'} },
+            title: { text: '智慧司法云',textStyle:{color: '#000'} },
             tooltip: {
                 formatter: function (x) {
                     return x.data.des;
@@ -32,6 +37,48 @@ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='map2.jpg', sizing
             },
 									
             series: [
+			
+			{
+												type: 'map',
+												map: 'yulin',
+												itemStyle: {
+															normal: {//未选中状态
+																borderWidth:2,//边框大小
+																borderColor:'lightgreen',
+																areaColor: '#EEE',//背景颜色
+																label: {
+																	show: true,//显示名称
+																	textStyle: {
+																		color: '#fff',
+																		fontSize: 18,
+																	}
+																}
+															},
+															emphasis: {// 也是选中样式
+																borderWidth:2,
+																borderColor:'#fff',
+																areaColor: 'orange',
+																label: {
+																	show: true,
+																	textStyle: {
+																		color: '#fff',
+																		fontSize: 18,
+																	}
+																}
+															}    
+															},
+										
+												
+												data: [{
+													name: '玉州区',
+													selected: false
+												}]
+											},
+			
+			
+			
+			
+			
                 {
                     type: 'graph',
                     layout: 'force',
@@ -59,7 +106,7 @@ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='map2.jpg', sizing
                     lineStyle: {
                         normal: {
                             width: 2,
-                            color: '#4b565b'
+                            color: 'sapphire'
 
                         }
                     },
