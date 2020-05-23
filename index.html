@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>玉林市司法局“数字法治、智慧司法”智能化综合服务平台</title>
-    <script src="jquery-1.10.2.min.js"></script>
+   <!-- <script src="jquery-1.10.2.min.js"></script>-->
     <script src="echarts.min.js"></script>
 	<script src="yulin.js"></script>
     <style type="text/css">
@@ -94,7 +94,7 @@ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='map2.jpg', sizing
                         }
                     },
                     force: {
-                        repulsion: 1500,
+                        repulsion: 1000,
                         edgeLength: [10, 50]
                     },
                     draggable: true,
@@ -313,6 +313,69 @@ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='map2.jpg', sizing
                         }, {
                           
                             name: '智能化运行',
+                        }, {
+                          
+                            name: '',
+							itemStyle: {
+                                normal: {
+                                    color: '#50C5ff'
+                                }
+                            },
+							symbolSize: 30
+                        }, {
+                          
+                            name: '',
+							itemStyle: {
+                                normal: {
+                                    color: '#50C5ff'
+                                }
+                            },
+							symbolSize: 40
+                        }, {
+                          
+                            name: '',
+							itemStyle: {
+                                normal: {
+                                    color: '#50C5ff'
+                                }
+                            },
+							symbolSize: 35
+                        }, {
+                          
+                            name: '',
+							itemStyle: {
+                                normal: {
+                                    color: '#50C5ff'
+                                }
+                            },
+							symbolSize: 27
+                        }, {
+                          
+                            name: '',
+							itemStyle: {
+                                normal: {
+                                    color: '#50C5ff'
+                                }
+                            },
+							symbolSize: 38
+                        }, {
+                          
+                            name: '',
+							itemStyle: {
+                                normal: {
+                                    color: '#50C5ff'
+                                }
+                            },
+							symbolSize: 45
+                        }, {
+                          
+                            name: '',
+							itemStyle: {
+                                normal: {
+                                    color: '#50C5ff'
+                                }
+                            },
+							symbolSize: 50
                         }
                     ],
                     links: [
@@ -512,9 +575,43 @@ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='map2.jpg', sizing
 									show:false,
 									}
 								}
+                        }, {
+                            source: '“三大纠纷”调处平台',
+                            target: '图形识别技术',
+                            label:{
+									normal:{
+									show:false,
+									}
+								}
+                        }, {
+                            source: '行政复议平台',
+                            target: '区块链技术',
+                            label:{
+									normal:{
+									show:false,
+									}
+								}
+                        }, {
+                            source: '安置帮教平台',
+                            target: '大数据分析共享',
+                            label:{
+									normal:{
+									show:false,
+									}
+								}
+                        }, {
+                            source: '普法教育平台',
+                            target: '语音识别转换技术',
+                            label:{
+									normal:{
+									show:false,
+									}
+								}
                         }]
                 }
-            ]
+            ],
+		animationEasingUpdate: "quinticInOut",          // 数据更新动画的缓动效果。[ default: cubicOut ]    "quinticInOut"
+	    animationDurationUpdate: 1000                    // 数据更新动画的时长。[ default: 300 ]
         };
         myChart.setOption(option);
     </script>
